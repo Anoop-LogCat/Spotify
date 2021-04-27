@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".MenuFragment">
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:defaultNavHost="true"
+        android:layout_above="@id/musicFragmentSwitcher"
+        app:navGraph="@navigation/bottomnavigator" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/lightBlack"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/nav_state_changer"
+        app:itemTextColor="@drawable/nav_state_changer"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu"/>
+
+    <LinearLayout
+        android:id="@+id/musicFragmentSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:background="@color/lightBlack"
+        android:layout_above="@+id/bottom_nav"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/albumImageViewAtSwitcher"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_weight="5"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/songDescriptionRecycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="15"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <CheckBox
+            android:id="@+id/addFavButton"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:button="@null"
+            android:background="@drawable/heart_status_changer" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <CheckBox
+            android:id="@+id/playButton"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@drawable/play_status_changer"
+            android:button="@null"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_above="@+id/bottom_nav"/>
+
+</RelativeLayout>

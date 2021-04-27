@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#141415</color>
+    <color name="mediumBlack">#1C1C1E</color>
+    <color name="lightBlack">#2E2E31</color>
+    <color name="white">#FAFAFA</color>
+    <color name="grey">#CFCDCD</color>
+    <color name="rose">#0A9CAF</color>
+    <color name="spotify_green">#1DB954</color>
+
+    <color name="green_shade_1_back_color">#184d47</color>
+    <color name="green_shade_2_back_color">#1e6f5c</color>
+    <color name="green_shade_3_back_color">#5aa469</color>
+    <color name="green_shade_4_back_color">#adeecf</color>
+    <color name="green_shade_5_back_color">#3a6351</color>
+
+    <color name="brown_shade_1_back_color">#85603f</color>
+    <color name="brown_shade_2_back_color">#eeb76b</color>
+
+    <color name="red_shade_1_back_color">#fa1e0e</color>
+    <color name="red_shade_2_back_color">#bd2000</color>
+
+    <color name="rose_shade_1_back_color">#ff005c</color>
+
+    <color name="blue_shade_1_back_color">#120078</color>
+    <color name="blue_shade_2_back_color">#78c4d4</color>
+
+</resources>

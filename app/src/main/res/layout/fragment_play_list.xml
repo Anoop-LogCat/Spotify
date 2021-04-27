@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingTop="30dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".PlayListFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/close_button_in_playlist"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/close_icon"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/playFromTextViewInPlayList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:letterSpacing="0.2"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/artistNameTextViewInPlayList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:text="Now Playing"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginBottom="30dp">
+
+                <ImageView
+                    android:id="@+id/now_playingImageView"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/playlist_1"/>
+
+                <TextView
+                    android:id="@+id/now_playingTextView_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/now_playingImageView"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="Thandi Hawa"
+                    android:layout_toEndOf="@+id/now_playingImageView" />
+
+                <TextView
+                    android:id="@+id/now_playingTextView_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/now_playingImageView"
+                    android:layout_below="@+id/now_playingTextView_1"
+                    android:textSize="15sp"
+                    android:text="Ritviz"
+                    android:layout_toEndOf="@+id/now_playingImageView" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/musicFromTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Next From: English"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewInPlayList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/previous_buttonInPlaylist"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="80dp"
+                android:src="@drawable/previous_button"
+                android:layout_marginEnd="80dp" />
+
+            <CheckBox
+                android:id="@+id/play_buttonInPlaylist"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:button="@null"
+                android:background="@drawable/play_button_music_player" />
+
+            <ImageView
+                android:id="@+id/next_buttonInPlaylist"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+                android:src="@drawable/next_button"
+                android:layout_marginStart="80dp" />
+
+        </FrameLayout>
+
+
+</FrameLayout>
